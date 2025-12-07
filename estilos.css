@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+
+
+:root{
+    --fondo : #efefef ;
+    --color-1:#3e3e3e;
+    --color-1-oscuro: rgba(62, 62, 62, 0.8);
+    --font : 'Roboto';
+    --texto-blanco: #fff ;
+    --fondo-blanco:#fff
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font), sans-serif;
+    background-color: var(--fondo);
+    overflow-x: hidden;
+}
+
+
+body > header{
+    display: flex;
+    align-items: center;
+    padding-inline: 2em;
+}
+
+header img{
+    height: 9rem;
+    width: auto;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+header h1{
+    flex: 1 1 auto;         /* crece para llenar el espacio restante */
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+header section{
+    flex: 0 0 auto;        
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+header section > button {
+
+    border: none;
+    border-radius: 10%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header section :first-child{
+    color: var(--texto-blanco);
+    background-color: rgb(37, 104, 163);
+}
+
+header section :last-child{
+    text-decoration: underline;
+}
+
+
+nav ul{
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li{
+    padding: 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+nav ul .boton{
+    display: none;
+    width: auto;          
+    align-self: flex-start;
+}
+
+#check {
+    display: none;
+}
+nav ul li > a{
+    color: var(--texto-blanco);
+    text-decoration: none;
+}
+
+
+main{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+  background-color: var(--fondo-blanco);
+}
+
+main article{
+  padding: 20px;
+  border-right: 1px solid var(--fondo);
+  margin-bottom: 20px;
+}
+
+
+main article section > header{
+  font-size: 0.9lh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+
+main article section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  p{
+    text-align: justify;
+    font-size: 0.75lh;
+  }
+}
+
+main article footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+main aside{
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fondo-blanco);
+  padding-inline: 10px;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  
+  
+  .carrusel a{
+    
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        
+  }
+}
+
+
+.flecha {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.2s;
+    cursor: pointer;
+}
+
+
+.flecha.inactivo {
+    opacity: 0.3;          /* Se pone transparente */
+    pointer-events: none;  /* No se puede hacer clic */
+    cursor: default;
+}
+main aside .carrusel .flecha {
+    display: none;
+}
+
+main aside section a {
+    display: flex;            
+    flex-direction: column;  
+    margin-bottom: 15px;
+}
+
+main aside section a img {
+    width: 100%;       
+    height: auto;     
+    object-fit: contain; 
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+body > footer span{
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: space-around;
+    color: var(--texto-blanco);
+}
+
+
+body > footer span section div{
+    display: flex;
+    gap: 20px;
+
+    >img{
+        cursor: pointer;
+    }
+}
+/* Animaciones */
+
+
+@keyframes fade-in {
+    from   { 
+        opacity: 0; transform: translateY(-10px); 
+    }
+    to { 
+        opacity: 1; transform: translateY(0); 
+    }
+}
+/* 1. Ajuste para Laptops pequeñas */
+@media (max-width: 1204px){
+    main{
+        width: 95%; 
+    }
+}
+
+
+/* 2. TABLETS (El cambio grande de estructura) */
+@media (max-width: 940px) {
+
+    header{
+        justify-content: space-between;
+
+    }
+
+    header h1{
+        display: none; 
+    }
+
+
+    main{
+        width: 90%; 
+        margin: auto; 
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        padding-left: 0;
+        flex-direction: column; 
+    }
+
+    nav ul li:not(.boton) {
+        display: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav ul .boton { 
+        display: block; 
+        cursor: pointer;
+        color: white;
+        order: -1;
+        box-sizing: border-box;
+    }
+    
+    nav ul .boton label {
+        cursor: pointer;
+        display: block;     
+        width: 100%;          
+        height: 100%;        
+        display: flex;        
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav #check:checked ~ ul li:not(.boton) {
+        display: block;
+        animation: fade-in 0.4s ease-out forwards;
+    }
+
+
+    main aside{
+        position: static;
+        margin-top: 30px; 
+    }
+
+    .carrusel{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    main aside section {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        scroll-behavior: smooth;
+        padding-bottom: 20px; 
+        scrollbar-width: none; 
+        &::-webkit-scrollbar { display: none; } 
+    }
+
+    main aside section a {
+        flex: 0 0 45%; 
+        margin-bottom: 0;    
+        scroll-snap-align: center; 
+        height: auto;        
+    }
+
+
+    main aside .carrusel .flecha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background: white; 
+    }
+
+    .anterior { left: -15px; }
+    .despues { right: -15px; }
+    .flecha span { font-size: 1.2rem; color: #333; }
+}
+
+@media (max-width: 716px) {
+
+    header {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    main {
+        width: 94%; 
+    }
+
+    main aside section a {
+        flex: 0 0 85%; 
+    }
+
+    body > footer span{
+        flex-direction: column;
+        align-items: center;
+    }
+}

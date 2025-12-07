@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Noticioso - Informate aqui</title>
+    <meta name="description" content="Sitio web de noticias para mantenerte informado sobre los ultimos acontecimientos a nivel local e internacional.">
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <script src="index.js" defer></script>
+    
+</head> 
+<body>
+    
+
+    <header>
+        <img src="/logo.png" alt="Logo de la pagina">
+        <h1>EL NOTICIOSO</h1>
+        <section>
+            <button id="login">Iniciar Sesion</button>
+            <button id="register">Registrarse</button>
+        </section>
+    </header>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <ul>
+            <li><a href="/inicio">Inicio</a></li>
+            <li><a href="/locales">Locales</a></li>
+            <li><a href="/regionales">Regionales</a></li>
+            <li><a href="/nacionales">Nacionales</a></li>
+            <li><a href="/internacionales">Internacionales</a></li>
+            <li><a href="/archivo">Archivo</a></li>
+            <li><a href="/otros">Otros</a></li>
+            <li class="boton">
+                <label for="check">
+                    <span class="material-symbols-outlined menu">
+                        menu
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <section>
+                <header>
+                    <h2>Titulo de la noticia</h2>
+                    <span>Descripcion breve de la noticia</span>
+                </header>
+
+
+                <br>
+
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <br>
+                    <img src="https://imagenes.20minutos.es/uploads/imagenes/2024/05/15/una-imagen-creada-por-la-herramienta-imagen-3-de-google-1.jpeg">
+                </div>
+                <br>
+                <footer>
+
+                    <span>Autor: <strong>AUTOR</strong></span>
+                    <span>Fecha de Publicación :
+                    <strong>FECHA</strong></span> 
+
+                </footer>
+            </section>
+            <hr/>
+            <section>
+                <header>
+                    <h2>Titulo de la noticia</h2>
+                    <span>Descripcion breve de la noticia</span>
+                </header>
+
+
+                <br>
+
+                <div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <br>
+                    <img src="https://imagenes.20minutos.es/uploads/imagenes/2024/05/15/una-imagen-creada-por-la-herramienta-imagen-3-de-google-1.jpeg">
+                </div>
+                <br>
+                <footer>
+
+                    <span>Autor: <strong>AUTOR</strong></span>
+                    <span>Fecha de Publicación :
+                    <strong>FECHA</strong></span> 
+
+                </footer>
+            </section>
+        </article>
+
+        <aside>
+            <h2>MAS NOTICIAS</h2>
+            <div class="carrusel">
+                <button id="anterior" class="flecha anterior" onclick="moverScroll(-1)">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>
+                <section id="lista-noticias">
+                    <a>
+                        <h3>Titulo de la noticia adicional</h3>
+
+                        <p>Descripción de la noticia adicional</p>
+                        <img src="https://th.bing.com/th/id/OIP.IjOZ6emOjg2mkf5AUuAl0gHaEo?w=286&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1">
+                        <br>
+                        <span><strong>Fecha de Publicación : </strong> Fecha</span>
+                    </a>
+
+                    <a>
+                    <h3>Titulo de la noticia adicional</h3>
+
+                    <p>Descripción de la noticia adicional</p>
+                    <img src="https://th.bing.com/th/id/OIP.IjOZ6emOjg2mkf5AUuAl0gHaEo?w=286&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1">
+                    <br>
+                    <span><strong>Fecha de Publicación : </strong> Fecha</span>
+                    </a>
+                        
+                    <a>
+                        <h3>Titulo de la noticia adicional</h3>
+
+                        <p>Descripción de la noticia adicional</p>
+                        <img src="https://th.bing.com/th/id/OIP.IjOZ6emOjg2mkf5AUuAl0gHaEo?w=286&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1">
+                        <br>
+                        <span><strong>Fecha de Publicación : </strong> Fecha</span>
+                    </a>
+                </section>
+                <button class="flecha despues" onclick="moverScroll(1)">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
+            </div>
+            
+
+            
+        </aside>
+    </main>
+
+    <footer>
+        <span>
+            <p> <small>&Copyright 2025</small> : Desarrollado por Aldo Carbajal</p>
+            
+            <section>
+                <p>Sigueme en:</p>
+                <div>
+                    <a href="https://youtu.be/xvFZjo5PgG0?si=n8CvwbQPBzhnVdXe" target="_blank">
+                        <img src="icons/youtube.svg" alt="icon-yt"/>
+                    </a>
+                    <a href="https://youtu.be/xvFZjo5PgG0?si=n8CvwbQPBzhnVdXe" target="_blank">
+                        <img src="icons/twitter.svg" alt="icon-tweet">
+                    </a>
+                    <a href="https://youtu.be/xvFZjo5PgG0?si=n8CvwbQPBzhnVdXe" target="_blank">
+                        <img src="icons/github.svg" alt="icon-git">
+                    </a>
+                    <a href="https://youtu.be/xvFZjo5PgG0?si=n8CvwbQPBzhnVdXe" target="_blank">
+                        <img src="icons/whatsapp.svg" alt="icon-whats">
+                    </a>
+                </div>
+                
+            </section>
+        </span>
+        
+    </footer>
+</body>
+</html>
